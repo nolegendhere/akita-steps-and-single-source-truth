@@ -136,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "akita-steps-and-single-source-truth"
+  "defaultProject": "akita-steps-and-single-source-truth",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }
