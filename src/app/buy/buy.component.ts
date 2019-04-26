@@ -23,7 +23,7 @@ export class BuyComponent implements OnInit, OnDestroy {
       return this.formsManager
         .selectValid(step)
         .pipe(startWith(false));
-    })
+    });
 
     this.isFormValid$ = combineLatest(...stepsValidity$).pipe(
       map((stepsValidity) => stepsValidity.every(Boolean)),

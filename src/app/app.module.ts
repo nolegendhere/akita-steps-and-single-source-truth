@@ -8,7 +8,7 @@ import {AkitaNgRouterStoreModule} from '@datorama/akita-ng-router-store';
 import {environment} from '../environments/environment';
 import {StepOneComponent} from './step-one/step-one.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {MatFormFieldModule, MatInputModule} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import {StepTwoComponent} from './step-two/step-two.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { StepThreeComponent } from './step-three/step-three.component';
@@ -31,6 +31,7 @@ import { EditInfoComponent } from './edit-info/edit-info.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
     environment.production ?
       [] :
       [AkitaNgDevtools.forRoot(), AkitaNgRouterStoreModule.forRoot()]

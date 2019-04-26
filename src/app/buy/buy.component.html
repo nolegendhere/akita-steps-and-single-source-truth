@@ -1,5 +1,5 @@
-<button routerLink="../edit-info">Edit Info</button>
+<button mat-raised-button routerLink="../edit-info">Edit Info</button>
 <router-outlet></router-outlet>
-<footer style="margin-top:100px">
+<footer style="margin-top:50px">
   <button mat-button [disabled]="!(isFormValid$ | async)">Submit</button>
 </footer>
