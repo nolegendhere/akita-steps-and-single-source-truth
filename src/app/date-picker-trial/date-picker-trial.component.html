@@ -1,5 +1,8 @@
 <div class="example-container">
   <button mat-button (click)="resetEvents()">Reset Events</button>
+  <mat-form-field appearance="outline" [floatLabel]="'always'">
+    <input matInput #localeDatePicker>
+  </mat-form-field>
   <button mat-button (click)="setLocale()">Set Locale</button>
 	<mat-form-field appearance="outline" [floatLabel]="'always'">
 		<mat-label>Both a label and a placeholder</mat-label>

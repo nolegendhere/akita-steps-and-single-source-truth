@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { DateAdapter } from "@angular/material/core";
 import * as _moment from "moment";
 import { MatDatepickerInputEvent } from "@angular/material/datepicker";
@@ -14,6 +14,7 @@ const moment = _rollupMoment || _moment;
 export class DatePickerTrialComponent {
   events: string[] = [];
 
+  @ViewChild('localeDatePicker') localeDatePicker: ElementRef;
   constructor(private adapter: DateAdapter<any>) {}
 
   addEvent(type: string, event: MatDatepickerInputEvent<_moment.Moment>) {
@@ -39,7 +40,7 @@ export class DatePickerTrialComponent {
   }
 
   setLocale() {
-    this.adapter.setLocale("de");
+    this.adapter.setLocale(this.localeDatePicker.nativeElement.value);
   }
 
   resetEvents() {

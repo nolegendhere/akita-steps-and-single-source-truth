@@ -10,8 +10,7 @@ import {
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
-  MatDatepickerModule,
-  MatSlideToggleModule
+  MatDatepickerModule
 } from '@angular/material';
 import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 
@@ -27,7 +26,6 @@ import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPT
     MatInputModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatSlideToggleModule,
   ],
   exports: [
     CommonModule,
@@ -39,7 +37,6 @@ import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPT
     MatInputModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatSlideToggleModule,
   ],
   providers: [
     // FOR UTC
