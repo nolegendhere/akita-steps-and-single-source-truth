@@ -7,13 +7,12 @@ import {AkitaNgDevtools} from '@datorama/akita-ngdevtools';
 import {AkitaNgRouterStoreModule} from '@datorama/akita-ng-router-store';
 import {environment} from '../environments/environment';
 import {StepOneComponent} from './step-one/step-one.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import {MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import {StepTwoComponent} from './step-two/step-two.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { StepThreeComponent } from './step-three/step-three.component';
 import { BuyComponent } from './buy/buy.component';
 import { EditInfoComponent } from './edit-info/edit-info.component';
+import { DatePickerTrialComponent } from './date-picker-trial/date-picker-trial.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -22,19 +21,16 @@ import { EditInfoComponent } from './edit-info/edit-info.component';
     StepTwoComponent,
     StepThreeComponent,
     BuyComponent,
-    EditInfoComponent
+    EditInfoComponent,
+    DatePickerTrialComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
     environment.production ?
       [] :
-      [AkitaNgDevtools.forRoot(), AkitaNgRouterStoreModule.forRoot()]
+      [AkitaNgDevtools.forRoot(), AkitaNgRouterStoreModule.forRoot()],
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

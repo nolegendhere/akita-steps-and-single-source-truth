@@ -5,11 +5,12 @@ import {StepTwoComponent} from './step-two/step-two.component';
 import {StepThreeComponent} from './step-three/step-three.component';
 import {BuyComponent} from './buy/buy.component';
 import {EditInfoComponent} from './edit-info/edit-info.component';
+import { DatePickerTrialComponent } from './date-picker-trial/date-picker-trial.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/buy/step-one',
+    redirectTo: 'date-picker-example',
     pathMatch: 'full'
   },
   {
@@ -34,7 +35,11 @@ const routes: Routes = [
       }
     ]
   },
-  {path: '**', component: BuyComponent}
+  {
+    path: 'date-picker-example',
+    component: DatePickerTrialComponent
+  },
+  {path: '**', component: DatePickerTrialComponent}
 ];
 
 @NgModule({

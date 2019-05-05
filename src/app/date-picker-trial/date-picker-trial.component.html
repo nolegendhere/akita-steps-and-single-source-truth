@@ -1,0 +1,14 @@
+<div class="example-container">
+  <button mat-button (click)="resetEvents()">Reset Events</button>
+  <button mat-button (click)="setLocale()">Set Locale</button>
+	<mat-form-field appearance="outline" [floatLabel]="'always'">
+		<mat-label>Both a label and a placeholder</mat-label>
+		<input matInput [matDatepicker]="picker" (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker touchUi #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div class="example-events">
+    <div *ngFor="let e of events">{{e}}</div>
+  </div>
+</div>
